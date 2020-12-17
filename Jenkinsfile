@@ -21,10 +21,10 @@ pipeline {
                         script{
                             scannerHome = tool name:  'SonarScanner' , type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                         }
-                        echo "${scannerHome}/-------------------------------"
+                        echo "${scannerHome}/bin/sonar-scanner"
 
                         withSonarQubeEnv('sonarQubeServers') {
-                            sh '${scannerHome}/bin/sonar-scanner'
+                            sh  "${scannerHome}/bin/sonar-scanner"
                         }
 
                     }
