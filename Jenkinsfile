@@ -16,7 +16,7 @@ pipeline {
         stage('code checking ') {
                     steps {
                         scrpit {
-                            scannerHome = tool 'sonar-scaner' # Global Tool Configuration 配置 scaner
+                            scannerHome = tool 'sonar-scaner' //Global Tool Configuration 配置 scaner
                         }
                         withSonarQubeEnv('SonarQube') {
                             sh '${scannerHome}/bin/sonar-scanner'
