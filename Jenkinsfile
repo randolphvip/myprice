@@ -17,7 +17,7 @@ pipeline {
                     steps {
 
                              //Global Tool Configuration 配置 scaner
-                       def  scannerHome = tool 'sonar-scaner' ;
+                         scannerHome = tool 'sonar-scaner'
 
                         withSonarQubeEnv('sonarQubeServers') {
                             sh '${scannerHome}/bin/sonar-scanner'
