@@ -17,9 +17,9 @@ pipeline {
                     steps {
 
                              //Global Tool Configuration 配置 scaner
-
-                         scannerHome = tool name:  'SonarScanner' , type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-
+                        script{
+                            scannerHome = tool name:  'SonarScanner' , type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+                        }
 
                         withSonarQubeEnv('sonarQubeServers') {
                             sh '${scannerHome}/bin/sonar-scanner'
