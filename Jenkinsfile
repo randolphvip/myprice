@@ -11,7 +11,7 @@ pipeline {
         stage('build') {
             steps {
             echo 'building......'
-              //  sh 'mvn clean package'
+              sh 'mvn clean package'
             }
         }
         stage('code checking ') {
@@ -21,7 +21,7 @@ pipeline {
                         script{
                             scannerHome = tool name:  'SonarScanner' , type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                         }
-                        echo "${scannerHome}/bin/sonar-scanner"
+
 
                         withSonarQubeEnv('sonarQubeServers') {
                             sh  "${scannerHome}/bin/sonar-scanner"
