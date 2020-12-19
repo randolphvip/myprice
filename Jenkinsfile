@@ -24,6 +24,8 @@ pipeline {
 
 
                         withSonarQubeEnv('sonarQubeServers') {
+                            echo "${project_name}......ready for checking"
+
                             sh  "${scannerHome}/bin/sonar-scanner"
                         }
 

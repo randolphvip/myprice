@@ -37,7 +37,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	<!--用于springboot的打包，如果没这个插件，则打的包不包含springboot的jar-->
 	<build>
 		<plugins>
 			<plugin>
