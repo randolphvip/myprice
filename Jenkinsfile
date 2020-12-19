@@ -24,15 +24,9 @@ pipeline {
 
 
                         withSonarQubeEnv('sonarQubeServers') {
-
                             echo "check code ? ......  ${CodeCheck}"
-
-                                sh  "${scannerHome}/bin/sonar-scanner"
-
-
-
+                             //   sh  "${scannerHome}/bin/sonar-scanner"
                         }
-
                     }
                 }
          stage('package') {
