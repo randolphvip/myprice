@@ -24,9 +24,14 @@ pipeline {
 
 
                         withSonarQubeEnv('sonarQubeServers') {
-                            echo "${project_name}......ready for checking"
+                            echo "check code ? ......  ${CodeCheck}"
+                               if(${CodeCheck}=="Yes"){
+                                sh  "${scannerHome}/bin/sonar-scanner"
+                               }else{
+                                         echo "check code ? ......  ${CodeCheck}"
+                               }
 
-                            sh  "${scannerHome}/bin/sonar-scanner"
+
                         }
 
                     }
