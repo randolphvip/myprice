@@ -25,7 +25,7 @@ pipeline {
 
                         withSonarQubeEnv('sonarQubeServers') {
                             echo "check code ? ......  ${CodeCheck}"
-                               if(${CodeCheck}=="Yes"){
+                               if ( ${CodeCheck} == "Yes" ) {
                                 sh  "${scannerHome}/bin/sonar-scanner"
                                }else{
                                          echo "check code ? ......  ${CodeCheck}"
