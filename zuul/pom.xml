@@ -52,22 +52,31 @@
                         <id>default</id>
                         <goals>
                             <goal>build</goal>
-                            <goal>push</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>zuulID</id>
+                        <id>zuulTag</id>
                         <goals>
                             <goal>tag</goal>
 
                         </goals>
                         <configuration>
-                            <repository>192.168.1.135:8005/my_price/zuul</repository>
-
+                            <repository>192.168.1.135:8005/myprice/zuul</repository>
                         </configuration>
                     </execution>
-                </executions>
+                    <execution>
+                        <id>zuulPush</id>
+                        <goals>
+                            <goal>push</goal>
+                        </goals>
+                        <configuration>
 
+                            <username>admin</username>
+                            <password>Harbor12345</password>
+                        </configuration>
+                    </execution>
+
+                </executions>
                 <configuration>
 
                     <tag>${project.version}</tag>
