@@ -62,7 +62,7 @@
 
                         </goals>
                         <configuration>
-                            <repository>192.168.1.135/my_price/zuul</repository>
+                            <repository>192.168.1.135:8005/my_price/zuul</repository>
 
                         </configuration>
                     </execution>
