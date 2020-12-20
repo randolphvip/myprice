@@ -56,12 +56,21 @@
                             <goal>push</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <goals>
+                            <goal>push</goal>
+                        </goals>
+                        <configuration>
+                            <tag>192.168.1.135/my_price/zuul</tag>
+                        </configuration>
+                    </execution>
                 </executions>
 
                 <configuration>
+
                     <tag>${project.version}</tag>
                     <dockerfile>Dockerfile</dockerfile>
-                    <repository>${project.artifactId}</repository>
+                    <repository>myprice_zuul</repository>
                 </configuration>
             </plugin>
 
