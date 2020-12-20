@@ -57,6 +57,7 @@
                         </goals>
                     </execution>
                     <execution>
+                        <id>zuulID</id>
                         <goals>
                             <goal>push</goal>
                         </goals>
