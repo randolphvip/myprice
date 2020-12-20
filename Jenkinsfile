@@ -25,13 +25,18 @@ pipeline {
 
                         withSonarQubeEnv('sonarQubeServers') {
                             echo "check code ? ......  ${CodeCheck}"
+                            //temporary cancel code scan. the reason is that scanning need energy.
                              //   sh  "${scannerHome}/bin/sonar-scanner"
+
                         }
                     }
                 }
-         stage('package') {
+         stage('package docker file') {
             steps {
-                echo 'package'
+                echo 'package  + ${project_name}'
+                sh "cd  ${project_name}"
+                 sh "mvn dockerfile:build"
+
             }
         }
     }

@@ -39,12 +39,21 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+
             <plugin>
                 <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-
+                <artifactId>dockerfile-maven-plugin</artifactId>
+                <version>1.4.13</version>
+                <executions>
+                    <execution>
+                        <id>default</id>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <imageName>example</imageName>
+                    <repository>${project.artifactId}</repository>
                 </configuration>
             </plugin>
     </plugins>
