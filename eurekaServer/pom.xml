@@ -3,11 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>eureka_server</artifactId>
+	<artifactId>eurekaServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eureka_server</name>
+	<name>eurekaServer</name>
 
 	<parent>
 		<groupId>com.sc</groupId>
@@ -51,7 +51,7 @@
 				</executions>
 				<configuration>
 					<dockerfile>Dockerfile</dockerfile>
-					<repository>${project.artifactId}</repository>
+					<repository>myprice_eureka</repository>
 				</configuration>
 			</plugin>
 		</plugins>
