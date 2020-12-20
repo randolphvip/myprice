@@ -48,6 +48,7 @@
 					</execution>
 				</executions>
 
+
 				<configuration>
 					<tag>${project.version}</tag>
 					<dockerfile>Dockerfile</dockerfile>
