@@ -24,7 +24,7 @@ pipeline {
 
 
                         withSonarQubeEnv('sonarQubeServers') {
-                            echo "check code ? ......  ${CodeCheck}"
+                      //      echo "check code ? ......  ${CodeCheck}"
                             //temporary cancel code scan. the reason is that scanning need energy.
                              //   sh  "${scannerHome}/bin/sonar-scanner"
 
