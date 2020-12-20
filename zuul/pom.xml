@@ -59,9 +59,11 @@
                         <id>zuulID</id>
                         <goals>
                             <goal>tag</goal>
+
                         </goals>
                         <configuration>
-                            <tag>192.168.1.135/my_price/zuul</tag>
+                            <repository>192.168.1.135/my_price/zuul</repository>
+
                         </configuration>
                     </execution>
                 </executions>
