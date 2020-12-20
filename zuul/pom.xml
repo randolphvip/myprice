@@ -52,10 +52,14 @@
                         <id>default</id>
                         <goals>
                             <goal>build</goal>
+                            <goal>tag</goal>
+                            <goal>push</goal>
                         </goals>
                     </execution>
                 </executions>
+
                 <configuration>
+                    <tag>${project.version}</tag>
                     <dockerfile>Dockerfile</dockerfile>
                     <repository>${project.artifactId}</repository>
                 </configuration>

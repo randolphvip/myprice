@@ -11,7 +11,7 @@ pipeline {
         stage('build') {
             steps {
             echo 'building......'
-              sh 'mvn clean package'
+              sh 'mvn clean '
             }
         }
         stage('code checking ') {
@@ -31,13 +31,13 @@ pipeline {
                         }
                     }
                 }
-//          stage('package docker file') {
-//             steps {
-//                 echo 'package  ......     ${project_name}  '
-//                 sh "cd  ${project_name}"
-//                  sh "mvn dockerfile:build"
-//
-//             }
-//         }
+         stage('package docker file') {
+            steps {
+                echo '  '
+
+                 sh "mvn package"
+
+            }
+        }
     }
 }
