@@ -6,7 +6,6 @@
 	<artifactId>eurekaServer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-
 	<name>eurekaServer</name>
 
 	<parent>
@@ -14,9 +13,6 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<artifactId>myPrice</artifactId>
 	</parent>
-
-
-
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
@@ -46,10 +42,14 @@
 						<id>default</id>
 						<goals>
 							<goal>build</goal>
+							<goal>tag</goal>
+							<goal>push</goal>
 						</goals>
 					</execution>
 				</executions>
+
 				<configuration>
+					<tag>${project.version}</tag>
 					<dockerfile>Dockerfile</dockerfile>
 					<repository>myprice_eureka</repository>
 				</configuration>
