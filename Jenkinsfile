@@ -33,7 +33,7 @@ pipeline {
                 }
          stage('package docker file') {
             steps {
-                echo 'package  + ${project_name}'
+                echo 'package  ......     ${project_name}  '
                 sh "cd  ${project_name}"
                  sh "mvn dockerfile:build"
 
