@@ -1,7 +1,6 @@
-pipeline {
-    agent any
+node {
 
-    stages {
+
         stage('pull code') {
             steps {
                 echo 'pull code'
@@ -41,9 +40,10 @@ pipeline {
           stage('tag docker file') {
                     steps {
                         echo '  '
-
+                        def dockerfileName = "xxxdockerxxxx";
+                        echo "${dockerfileName}"
 
                     }
                 }
-    }
+
 }
