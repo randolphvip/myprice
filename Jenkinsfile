@@ -1,7 +1,6 @@
-pipeline {
-    agent any
+node {
 
-    stages {
+
         stage('pull code') {
             steps {
                 echo 'pull code'
@@ -46,5 +45,5 @@ pipeline {
 
                     }
                 }
-    }
+
 }
