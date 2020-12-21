@@ -34,10 +34,17 @@ pipeline {
          stage('package docker file') {
             steps {
                 echo '  '
-
                  sh "mvn package"
 
             }
         }
+          stage('tag docker file') {
+                    steps {
+                        echo '  '
+                        def dockerfileName = "xxxdockerxxxx";
+                        echo "${dockerfileName}"
+
+                    }
+                }
     }
 }

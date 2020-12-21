@@ -54,7 +54,7 @@
                             <goal>build</goal>
                         </goals>
                     </execution>
-                    <execution>
+                    <!--execution>
                         <id>zuulTag</id>
                         <goals>
                             <goal>tag</goal>
@@ -69,12 +69,7 @@
                         <goals>
                             <goal>push</goal>
                         </goals>
-                        <configuration>
-
-                            <username>admin</username>
-                            <password>Harbor12345</password>
-                        </configuration>
-                    </execution>
+                    </execution-->
 
                 </executions>
                 <configuration>
