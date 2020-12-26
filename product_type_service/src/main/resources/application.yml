@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: product_type_service # 服务名称
+  jpa:
+    show-sql: true
+
+
+# 服务注册中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8040/eureka
+  instance:
+    prefer-ip-address: true #使用IP注册
+server:
+  port: 8041
+
+logging:
+  level:
+    com:
+      looedu:
+        mapper: debug
+
+      dy:
+        springboot:
+          server:
+            mapper: debug

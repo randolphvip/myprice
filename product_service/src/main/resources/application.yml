@@ -1,14 +1,12 @@
 spring:
   application:
-    name: service01 # 服务名称
+    name: product_service # 服务名称
 
 # 服务注册中心
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8040/eureka
-  instance:
-    prefer-ip-address: true #使用IP注册
 
 server:
-  port: 8041
+  port: 8042
