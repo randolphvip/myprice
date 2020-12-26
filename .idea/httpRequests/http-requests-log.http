@@ -1,0 +1,21 @@
+GET http://localhost:8041/product/type?id=2
+
+###
+
+GET http://localhost:8041/product/type?id=2
+
+<> 2020-12-24T003106.200.json
+
+###
+
+POST http://localhost:8041/product/type/list
+Content-Type: application/json
+
+{}
+
+
+
+<> 2020-12-22T041029.200.json
+
+###
+
